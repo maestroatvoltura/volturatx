@@ -64,7 +64,7 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Stats */}
+          {/* Stats - Replaced with Core Values to remove fake numbers */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -72,45 +72,33 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="bg-zinc-900/50 border border-zinc-800 p-8 md:p-10 rounded-lg">
-              <div className="grid grid-cols-2 gap-x-8 gap-y-10">
-                <div className="border-b border-zinc-800 pb-4">
-                  <span className="block text-3xl md:text-4xl font-semibold text-zinc-100 mb-1">
-                    $100M+
-                  </span>
-                  <span className="text-zinc-500 text-xs tracking-wide uppercase">
-                    Assets Under Management
-                  </span>
+            <div className="bg-zinc-900/50 border border-zinc-800 p-8 md:p-10 rounded-lg backdrop-blur-sm">
+              <div className="space-y-8">
+                <div className="border-b border-zinc-800 pb-6 last:border-0 last:pb-0">
+                  <h3 className="text-xl font-semibold text-zinc-100 mb-2">Discretion</h3>
+                  <p className="text-zinc-400 text-sm leading-relaxed">
+                    We operate with complete confidentiality. Your acquisitions and strategic moves remain private until you choose to announce them.
+                  </p>
                 </div>
-                <div className="border-b border-zinc-800 pb-4">
-                  <span className="block text-3xl md:text-4xl font-semibold text-zinc-100 mb-1">
-                    2,500+
-                  </span>
-                  <span className="text-zinc-500 text-xs tracking-wide uppercase">
-                    Domains Secured
-                  </span>
+                
+                <div className="border-b border-zinc-800 pb-6 last:border-0 last:pb-0">
+                  <h3 className="text-xl font-semibold text-zinc-100 mb-2">Security</h3>
+                  <p className="text-zinc-400 text-sm leading-relaxed">
+                    Our transfer protocols utilize escrow-grade security to ensure asset integrity and seamless ownership migration.
+                  </p>
                 </div>
-                <div className="border-b border-zinc-800 pb-4">
-                  <span className="block text-3xl md:text-4xl font-semibold text-zinc-100 mb-1">
-                    25+
-                  </span>
-                  <span className="text-zinc-500 text-xs tracking-wide uppercase">
-                    Global Markets
-                  </span>
-                </div>
-                <div className="border-b border-zinc-800 pb-4">
-                  <span className="block text-3xl md:text-4xl font-semibold text-zinc-100 mb-1">
-                    2018
-                  </span>
-                  <span className="text-zinc-500 text-xs tracking-wide uppercase">
-                    Founded
-                  </span>
+
+                <div className="pb-2">
+                  <h3 className="text-xl font-semibold text-zinc-100 mb-2">Speed</h3>
+                  <p className="text-zinc-400 text-sm leading-relaxed">
+                    Digital markets move instantly. Our acquisition pipeline is built for rapid execution and immediate asset deployment.
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Subtle glow accent */}
-            <div className="absolute -top-2 -right-2 w-16 h-16 bg-emerald-500/5 rounded-full blur-xl" />
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
           </motion.div>
         </div>
       </div>
