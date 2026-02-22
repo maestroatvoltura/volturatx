@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import Image from "next/image";
 
 function cn(...inputs: (string | undefined | null | false)[]) {
   return twMerge(clsx(inputs));
@@ -41,8 +42,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-zinc-100 flex items-center justify-center rounded-md">
-            <span className="text-zinc-950 font-semibold text-sm">V</span>
+          <div className="relative w-8 h-8 rounded-md overflow-hidden">
+             <Image 
+               src="/logo.png" 
+               alt="Voltura Logo" 
+               fill 
+               className="object-contain"
+             />
           </div>
           <div className="hidden sm:block">
             <span className="text-sm font-semibold text-zinc-100 tracking-tight">

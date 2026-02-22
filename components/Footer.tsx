@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,8 +11,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="#" className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 bg-zinc-100 flex items-center justify-center rounded-md">
-                <span className="text-zinc-950 font-semibold text-sm">V</span>
+              <div className="relative w-8 h-8 rounded-md overflow-hidden">
+                <Image 
+                  src="/logo.png" 
+                  alt="Voltura Logo" 
+                  fill 
+                  className="object-contain"
+                />
               </div>
               <div>
                 <span className="text-sm font-semibold text-zinc-200 tracking-tight">
