@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Clock } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock, ExternalLink } from "lucide-react";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { useState } from "react";
@@ -21,88 +21,88 @@ export interface Asset {
 
 const assets: Asset[] = [
   {
-    id: "TX-DAL-09",
-    domain: "FriscoEmergencyDentist.com",
-    market: "Dallas-Fort Worth",
-    category: "Healthcare",
+    id: "GLB-TEC-001",
+    domain: "CloudInfrastructure.ai",
+    market: "Global",
+    category: "Technology",
     status: "Available",
-    price: "$15,000",
+    price: "$85,000",
   },
   {
-    id: "TX-ATX-22",
-    domain: "AustinLuxuryRoofing.com",
-    market: "Austin",
-    category: "Trade Services",
+    id: "NAM-FIN-042",
+    domain: "PrivateWealthManagement.com",
+    market: "North America",
+    category: "Financial Services",
     status: "In Negotiation",
   },
   {
-    id: "TX-HOU-15",
-    domain: "HoustonCorporateLawyer.com",
-    market: "Houston",
-    category: "Legal",
-    status: "Available",
-    price: "$25,000",
-  },
-  {
-    id: "TX-SAT-07",
-    domain: "SanAntonioCommercialRealEstate.com",
-    market: "San Antonio",
-    category: "Real Estate",
-    status: "Available",
-    price: "$18,500",
-  },
-  {
-    id: "TX-AUS-31",
-    domain: "AustinMedSpa.com",
-    market: "Austin",
+    id: "EUR-HEA-018",
+    domain: "TelemedicinePlatform.eu",
+    market: "Europe",
     category: "Healthcare",
+    status: "Available",
+    price: "$45,000",
+  },
+  {
+    id: "APAC-LEG-007",
+    domain: "CorporateGovernance.asia",
+    market: "Asia-Pacific",
+    category: "Legal Services",
+    status: "Available",
+    price: "$32,000",
+  },
+  {
+    id: "GLB-LUX-023",
+    domain: "PrivateAviation.net",
+    market: "Global",
+    category: "Luxury Services",
     status: "In Negotiation",
   },
   {
-    id: "TX-FWT-04",
-    domain: "FortWorthPersonalInjury.com",
-    market: "Dallas-Fort Worth",
-    category: "Legal",
+    id: "NAM-TEC-089",
+    domain: "EnterpriseSecurity.io",
+    market: "North America",
+    category: "Technology",
     status: "Available",
-    price: "$12,000",
+    price: "$125,000",
   },
   {
-    id: "TX-PL-12",
-    domain: "PlanoHomeHealthCare.com",
-    market: "Dallas-Fort Worth",
+    id: "EUR-RET-015",
+    domain: "SustainableRetail.eu",
+    market: "Europe",
+    category: "Retail",
+    status: "Available",
+    price: "$28,000",
+  },
+  {
+    id: "GLB-HEA-031",
+    domain: "ClinicalResearch.net",
+    market: "Global",
     category: "Healthcare",
-    status: "Available",
-    price: "$9,500",
-  },
-  {
-    id: "TX-ALD-03",
-    domain: "AldineCommercialPlumbing.com",
-    market: "Houston",
-    category: "Trade Services",
     status: "In Negotiation",
   },
 ];
 
 const statusStyles = {
   Available: {
-    bg: "bg-green-50",
-    text: "text-green-700",
-    border: "border-green-200",
-    dot: "bg-green-500",
+    bg: "bg-emerald-500/10",
+    text: "text-emerald-400",
+    border: "border-emerald-500/20",
+    dot: "bg-emerald-500",
     icon: CheckCircle,
   },
   "In Negotiation": {
-    bg: "bg-amber-50",
-    text: "text-amber-700",
-    border: "border-amber-200",
-    dot: "bg-amber-500",
+    bg: "bg-blue-500/10",
+    text: "text-blue-400",
+    border: "border-blue-500/20",
+    dot: "bg-blue-500",
     icon: Clock,
   },
   Acquired: {
-    bg: "bg-slate-50",
-    text: "text-slate-500",
-    border: "border-slate-200",
-    dot: "bg-slate-400",
+    bg: "bg-zinc-800/50",
+    text: "text-zinc-500",
+    border: "border-zinc-700",
+    dot: "bg-zinc-600",
     icon: CheckCircle,
   },
 };
@@ -117,7 +117,7 @@ export default function AssetTable() {
   return (
     <section
       id="portfolio"
-      className="py-24 bg-white border-t border-slate-100"
+      className="py-24 bg-zinc-950 border-t border-zinc-900"
     >
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
@@ -127,29 +127,29 @@ export default function AssetTable() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <span className="text-gold-600 font-medium text-sm tracking-widest uppercase mb-4">
+          <span className="text-zinc-500 font-medium text-xs tracking-widest uppercase mb-4">
             Current Inventory
           </span>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-semibold text-zinc-100 mb-4 tracking-tight">
             Portfolio Assets
           </h2>
-          <p className="text-slate-500 max-w-2xl">
-            Premium digital real estate assets available for acquisition. Each
-            asset has been vetted for market potential and strategic value.
+          <p className="text-zinc-500 max-w-2xl">
+            Premium digital assets available for acquisition. All assets have been
+            evaluated for strategic market positioning and brand authority.
           </p>
         </motion.div>
 
         {/* Filter */}
-        <div className="flex flex-wrap gap-3 mb-8">
+        <div className="flex flex-wrap gap-2 mb-8">
           {["All", "Available", "In Negotiation"].map((status) => (
             <button
               key={status}
               onClick={() => setFilter(status)}
               className={cn(
-                "px-5 py-2 text-sm font-medium tracking-wide transition-colors border",
+                "px-4 py-1.5 text-xs font-medium tracking-wide transition-all duration-200 border rounded-md",
                 filter === status
-                  ? "bg-navy-900 text-white border-navy-900"
-                  : "bg-white text-slate-600 border-slate-300 hover:border-navy-900"
+                  ? "bg-zinc-100 text-zinc-950 border-zinc-100"
+                  : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:border-zinc-700 hover:text-zinc-300"
               )}
             >
               {status === "All" ? "All Assets" : status}
@@ -157,30 +157,30 @@ export default function AssetTable() {
           ))}
         </div>
 
-        {/* Table */}
+        {/* Table - Financial Terminal Style */}
         <div className="overflow-x-auto">
           <table className="w-full border-collapse">
             <thead>
-              <tr className="border-b border-slate-200">
-                <th className="text-left py-4 px-4 text-xs font-medium text-slate-500 tracking-widest uppercase">
+              <tr className="border-b border-zinc-800">
+                <th className="text-left py-3 px-4 text-xs font-medium text-zinc-500 tracking-wider uppercase">
                   Asset ID
                 </th>
-                <th className="text-left py-4 px-4 text-xs font-medium text-slate-500 tracking-widest uppercase">
+                <th className="text-left py-3 px-4 text-xs font-medium text-zinc-500 tracking-wider uppercase">
                   Domain
                 </th>
-                <th className="text-left py-4 px-4 text-xs font-medium text-slate-500 tracking-widest uppercase">
+                <th className="text-left py-3 px-4 text-xs font-medium text-zinc-500 tracking-wider uppercase">
                   Market
                 </th>
-                <th className="text-left py-4 px-4 text-xs font-medium text-slate-500 tracking-widest uppercase">
+                <th className="text-left py-3 px-4 text-xs font-medium text-zinc-500 tracking-wider uppercase">
                   Category
                 </th>
-                <th className="text-left py-4 px-4 text-xs font-medium text-slate-500 tracking-widest uppercase">
+                <th className="text-left py-3 px-4 text-xs font-medium text-zinc-500 tracking-wider uppercase">
                   Status
                 </th>
-                <th className="text-left py-4 px-4 text-xs font-medium text-slate-500 tracking-widest uppercase">
+                <th className="text-left py-3 px-4 text-xs font-medium text-zinc-500 tracking-wider uppercase">
                   Valuation
                 </th>
-                <th className="text-right py-4 px-4 text-xs font-medium text-slate-500 tracking-widest uppercase">
+                <th className="text-right py-3 px-4 text-xs font-medium text-zinc-500 tracking-wider uppercase">
                   Action
                 </th>
               </tr>
@@ -194,49 +194,50 @@ export default function AssetTable() {
                 return (
                   <motion.tr
                     key={asset.id}
-                    initial={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                    transition={{ duration: 0.3, delay: index * 0.03 }}
                     className={cn(
-                      "border-b border-slate-100 hover:bg-slate-50 transition-colors cursor-pointer",
-                      isExpanded && "bg-slate-50"
+                      "border-b border-zinc-800/50 hover:bg-zinc-900/30 transition-colors cursor-pointer",
+                      isExpanded && "bg-zinc-900/30"
                     )}
                     onClick={() =>
                       setExpandedRow(isExpanded ? null : asset.id)
                     }
                   >
-                    <td className="py-5 px-4">
-                      <span className="font-mono text-sm text-navy-900 font-medium">
+                    <td className="py-4 px-4">
+                      <span className="terminal-font text-xs text-zinc-500">
                         {asset.id}
                       </span>
                     </td>
-                    <td className="py-5 px-4">
+                    <td className="py-4 px-4">
                       <div className="flex items-center gap-2">
-                        <span className="font-medium text-navy-900">
+                        <span className="text-zinc-200 font-medium">
                           {asset.domain}
                         </span>
                         {isExpanded && (
                           <motion.span
                             initial={{ rotate: 0 }}
                             animate={{ rotate: 90 }}
+                            transition={{ duration: 0.2 }}
                           >
-                            <ArrowRight size={14} className="text-gold-600" />
+                            <ArrowRight size={12} className="text-zinc-400" />
                           </motion.span>
                         )}
                       </div>
                     </td>
-                    <td className="py-5 px-4 text-slate-600">
+                    <td className="py-4 px-4 text-zinc-400">
                       {asset.market}
                     </td>
-                    <td className="py-5 px-4">
-                      <span className="inline-block px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600">
+                    <td className="py-4 px-4">
+                      <span className="inline-flex px-2.5 py-1 text-xs font-medium bg-zinc-800 text-zinc-300 rounded">
                         {asset.category}
                       </span>
                     </td>
-                    <td className="py-5 px-4">
+                    <td className="py-4 px-4">
                       <span
                         className={cn(
-                          "inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium border",
+                          "inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium border rounded-md",
                           statusStyle.bg,
                           statusStyle.text,
                           statusStyle.border
@@ -245,19 +246,18 @@ export default function AssetTable() {
                         <span
                           className={cn("w-1.5 h-1.5 rounded-full", statusStyle.dot)}
                         />
-                        <StatusIcon size={12} />
+                        <StatusIcon size={10} />
                         {asset.status}
                       </span>
                     </td>
-                    <td className="py-5 px-4 font-mono text-sm text-slate-600">
+                    <td className="py-4 px-4 terminal-font text-xs text-zinc-400">
                       {asset.price || "—"}
                     </td>
-                    <td className="py-5 px-4 text-right">
+                    <td className="py-4 px-4 text-right">
                       <button
-                        className="px-4 py-2 text-xs font-medium text-navy-900 border border-navy-900 hover:bg-navy-900 hover:text-white transition-colors"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-zinc-300 border border-zinc-700 hover:bg-zinc-800 hover:border-zinc-600 hover:text-zinc-100 transition-all duration-200 rounded-md"
                         onClick={(e) => {
                           e.stopPropagation();
-                          // Scroll to contact form with asset pre-filled
                           const form = document.getElementById("contact-form");
                           if (form) {
                             const input = form.querySelector(
@@ -273,6 +273,7 @@ export default function AssetTable() {
                           : asset.status === "In Negotiation"
                             ? "Waitlist"
                             : "Unavailable"}
+                        <ExternalLink size={10} />
                       </button>
                     </td>
                   </motion.tr>
@@ -282,13 +283,13 @@ export default function AssetTable() {
           </table>
         </div>
 
-        <div className="mt-8 text-center">
-          <p className="text-slate-500 text-sm">
-            Looking for assets not listed here?{" "}
-            <a href="#contact" className="text-gold-600 hover:underline">
-              Contact us
+        <div className="mt-10 text-center">
+          <p className="text-zinc-500 text-sm">
+            Seeking assets not listed here?{" "}
+            <a href="#contact" className="text-zinc-300 hover:text-zinc-100 transition-colors">
+              Contact our acquisition team
             </a>{" "}
-            for custom acquisition services.
+            for custom opportunities.
           </p>
         </div>
       </div>

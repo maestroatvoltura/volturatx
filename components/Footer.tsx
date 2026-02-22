@@ -4,46 +4,45 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy-950 text-white py-12 border-t border-navy-900">
+    <footer className="bg-zinc-950 text-zinc-400 py-10 border-t border-zinc-900">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-4 gap-8 mb-10">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link href="#" className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-white flex items-center justify-center">
-                <span className="text-navy-900 font-serif font-bold text-xl">V</span>
+            <Link href="#" className="flex items-center gap-3 mb-4">
+              <div className="w-8 h-8 bg-zinc-100 flex items-center justify-center rounded-md">
+                <span className="text-zinc-950 font-semibold text-sm">V</span>
               </div>
               <div>
-                <span className="font-serif text-xl font-semibold">
+                <span className="text-sm font-semibold text-zinc-200 tracking-tight">
                   Voltura
-                </span>
-                <span className="block text-xs text-slate-400 tracking-widest uppercase">
-                  Digital Assets
                 </span>
               </div>
             </Link>
-            <p className="text-slate-400 max-w-sm leading-relaxed">
-              Boutique digital real estate firm specializing in high-value,
-              geo-targeted domain acquisitions in Texas.
+            <p className="text-zinc-500 max-w-sm leading-relaxed text-sm">
+              Premium digital infrastructure firm specializing in strategic domain
+              portfolio management for global enterprises.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="text-xs font-medium text-zinc-300 tracking-widest uppercase mb-4">
+              Navigation
+            </h4>
+            <ul className="space-y-2.5 text-sm">
               <li>
                 <a
                   href="#about"
-                  className="text-slate-400 hover:text-white transition-colors"
+                  className="text-zinc-500 hover:text-zinc-300 transition-colors"
                 >
-                  The Firm
+                  About
                 </a>
               </li>
               <li>
                 <a
                   href="#approach"
-                  className="text-slate-400 hover:text-white transition-colors"
+                  className="text-zinc-500 hover:text-zinc-300 transition-colors"
                 >
                   Approach
                 </a>
@@ -51,7 +50,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#portfolio"
-                  className="text-slate-400 hover:text-white transition-colors"
+                  className="text-zinc-500 hover:text-zinc-300 transition-colors"
                 >
                   Portfolio
                 </a>
@@ -59,7 +58,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#contact"
-                  className="text-slate-400 hover:text-white transition-colors"
+                  className="text-zinc-500 hover:text-zinc-300 transition-colors"
                 >
                   Contact
                 </a>
@@ -69,13 +68,14 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-serif text-lg font-semibold mb-4">Contact</h4>
-            <ul className="space-y-3 text-slate-400">
-              <li>Austin, Texas, USA</li>
+            <h4 className="text-xs font-medium text-zinc-300 tracking-widest uppercase mb-4">
+              Contact
+            </h4>
+            <ul className="space-y-2.5 text-sm">
               <li>
                 <a
                   href="mailto:invest@voltura.com"
-                  className="hover:text-white transition-colors"
+                  className="text-zinc-500 hover:text-zinc-300 transition-colors"
                 >
                   invest@voltura.com
                 </a>
@@ -83,32 +83,35 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+15125670000"
-                  className="hover:text-white transition-colors"
+                  className="text-zinc-500 hover:text-zinc-300 transition-colors"
                 >
                   +1 (512) 567-0000
                 </a>
+              </li>
+              <li className="text-zinc-600">
+                United States
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-navy-900 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-500 text-sm">
-            © {currentYear} Voltura Digital Assets, LLC. All Rights Reserved.
+        <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-zinc-600 text-xs">
+            © {currentYear} Voltura. All Rights Reserved.
           </p>
-          <div className="flex gap-6 text-sm">
+          <div className="flex gap-6 text-xs">
             <a
               href="#"
-              className="text-slate-500 hover:text-white transition-colors"
+              className="text-zinc-600 hover:text-zinc-400 transition-colors"
             >
-              Privacy Policy
+              Privacy
             </a>
             <a
               href="#"
-              className="text-slate-500 hover:text-white transition-colors"
+              className="text-zinc-600 hover:text-zinc-400 transition-colors"
             >
-              Terms of Transfer
+              Terms
             </a>
           </div>
         </div>

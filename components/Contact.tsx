@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, Globe, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 export default function Contact() {
@@ -31,7 +31,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 bg-navy-900 text-white"
+      className="py-24 bg-zinc-950 border-t border-zinc-900"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16">
@@ -42,29 +42,29 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-gold-500 font-medium text-sm tracking-widest uppercase mb-4">
+            <span className="text-emerald-500 font-medium text-xs tracking-widest uppercase mb-4">
               Inquire
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-semibold text-zinc-100 mb-6 tracking-tight">
               Secure Your Position
             </h2>
-            <p className="text-slate-300 leading-relaxed mb-10">
-              Speak with our team about acquiring premium digital assets or
-              discussing custom acquisition services for your organization.
+            <p className="text-zinc-400 leading-relaxed mb-10">
+              Discuss acquiring premium digital assets or explore custom acquisition
+              services for your organization. Our team responds within 24-48 hours.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-5">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-navy-800 flex items-center justify-center flex-shrink-0">
-                  <Mail size={18} className="text-gold-500" />
+                <div className="w-10 h-10 bg-zinc-900 flex items-center justify-center flex-shrink-0 border border-zinc-800">
+                  <Mail size={16} className="text-zinc-400" />
                 </div>
                 <div>
-                  <span className="block text-xs text-slate-400 tracking-widest uppercase mb-1">
+                  <span className="block text-xs text-zinc-600 tracking-widest uppercase mb-1">
                     Email
                   </span>
                   <a
                     href="mailto:invest@voltura.com"
-                    className="text-white hover:text-gold-500 transition-colors"
+                    className="text-zinc-300 hover:text-zinc-100 transition-colors text-sm"
                   >
                     invest@voltura.com
                   </a>
@@ -72,16 +72,16 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-navy-800 flex items-center justify-center flex-shrink-0">
-                  <Phone size={18} className="text-gold-500" />
+                <div className="w-10 h-10 bg-zinc-900 flex items-center justify-center flex-shrink-0 border border-zinc-800">
+                  <Phone size={16} className="text-zinc-400" />
                 </div>
                 <div>
-                  <span className="block text-xs text-slate-400 tracking-widest uppercase mb-1">
+                  <span className="block text-xs text-zinc-600 tracking-widest uppercase mb-1">
                     Phone
                   </span>
                   <a
                     href="tel:+15125670000"
-                    className="text-white hover:text-gold-500 transition-colors"
+                    className="text-zinc-300 hover:text-zinc-100 transition-colors text-sm"
                   >
                     +1 (512) 567-0000
                   </a>
@@ -89,15 +89,15 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-navy-800 flex items-center justify-center flex-shrink-0">
-                  <MapPin size={18} className="text-gold-500" />
+                <div className="w-10 h-10 bg-zinc-900 flex items-center justify-center flex-shrink-0 border border-zinc-800">
+                  <Globe size={16} className="text-zinc-400" />
                 </div>
                 <div>
-                  <span className="block text-xs text-slate-400 tracking-widest uppercase mb-1">
-                    Location
+                  <span className="block text-xs text-zinc-600 tracking-widest uppercase mb-1">
+                    Headquarters
                   </span>
-                  <span className="text-slate-300">
-                    Austin, Texas, USA
+                  <span className="text-zinc-400 text-sm">
+                    United States
                   </span>
                 </div>
               </div>
@@ -111,34 +111,34 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white p-8 md:p-10"
+            className="bg-zinc-900/30 border border-zinc-800 p-8 md:p-10"
           >
             {submitted ? (
               <div className="text-center py-12">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <ArrowRight size={32} className="text-green-600" />
+                <div className="w-14 h-14 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <ArrowRight size={28} className="text-emerald-500" />
                 </div>
-                <h3 className="font-serif text-2xl font-semibold text-navy-900 mb-4">
+                <h3 className="text-xl font-semibold text-zinc-100 mb-4">
                   Inquiry Received
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-zinc-500">
                   Thank you for your interest. A member of our team will contact
                   you within 24-48 hours.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="mt-6 text-gold-600 hover:text-gold-700 font-medium"
+                  className="mt-6 text-zinc-400 hover:text-zinc-200 text-sm transition-colors"
                 >
                   Submit another inquiry
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid md:grid-cols-2 gap-5">
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-xs font-medium text-slate-500 tracking-widest uppercase mb-2"
+                      className="block text-xs font-medium text-zinc-500 tracking-widest uppercase mb-2"
                     >
                       Name *
                     </label>
@@ -151,14 +151,14 @@ export default function Contact() {
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
                       }
-                      className="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-navy-900 focus:outline-none transition-colors text-navy-900"
+                      className="w-full px-4 py-2.5 bg-zinc-950 border border-zinc-800 focus:border-zinc-600 focus:outline-none transition-colors text-zinc-200 text-sm rounded-md"
                       placeholder="John Smith"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="organization"
-                      className="block text-xs font-medium text-slate-500 tracking-widest uppercase mb-2"
+                      className="block text-xs font-medium text-zinc-500 tracking-widest uppercase mb-2"
                     >
                       Organization
                     </label>
@@ -170,7 +170,7 @@ export default function Contact() {
                       onChange={(e) =>
                         setFormData({ ...formData, organization: e.target.value })
                       }
-                      className="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-navy-900 focus:outline-none transition-colors text-navy-900"
+                      className="w-full px-4 py-2.5 bg-zinc-950 border border-zinc-800 focus:border-zinc-600 focus:outline-none transition-colors text-zinc-200 text-sm rounded-md"
                       placeholder="Company Name"
                     />
                   </div>
@@ -179,7 +179,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="asset"
-                    className="block text-xs font-medium text-slate-500 tracking-widest uppercase mb-2"
+                    className="block text-xs font-medium text-zinc-500 tracking-widest uppercase mb-2"
                   >
                     Asset of Interest
                   </label>
@@ -191,7 +191,7 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, asset: e.target.value })
                     }
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-navy-900 focus:outline-none transition-colors text-navy-900"
+                    className="w-full px-4 py-2.5 bg-zinc-950 border border-zinc-800 focus:border-zinc-600 focus:outline-none transition-colors text-zinc-200 text-sm rounded-md"
                     placeholder="Domain or Asset ID"
                   />
                 </div>
@@ -199,7 +199,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-xs font-medium text-slate-500 tracking-widest uppercase mb-2"
+                    className="block text-xs font-medium text-zinc-500 tracking-widest uppercase mb-2"
                   >
                     Email *
                   </label>
@@ -212,7 +212,7 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-navy-900 focus:outline-none transition-colors text-navy-900"
+                    className="w-full px-4 py-2.5 bg-zinc-950 border border-zinc-800 focus:border-zinc-600 focus:outline-none transition-colors text-zinc-200 text-sm rounded-md"
                     placeholder="john@company.com"
                   />
                 </div>
@@ -220,19 +220,19 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-xs font-medium text-slate-500 tracking-widest uppercase mb-2"
+                    className="block text-xs font-medium text-zinc-500 tracking-widest uppercase mb-2"
                   >
                     Message
                   </label>
                   <textarea
                     id="message"
                     name="message"
-                    rows={4}
+                    rows={3}
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-navy-900 focus:outline-none transition-colors text-navy-900 resize-none"
+                    className="w-full px-4 py-2.5 bg-zinc-950 border border-zinc-800 focus:border-zinc-600 focus:outline-none transition-colors text-zinc-200 text-sm resize-none rounded-md"
                     placeholder="Tell us about your interest..."
                   />
                 </div>
@@ -240,11 +240,11 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 bg-navy-900 text-white font-medium tracking-wide hover:bg-navy-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full py-3 bg-zinc-100 text-zinc-950 font-medium text-sm tracking-wide hover:bg-zinc-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 rounded-md"
                 >
                   {isSubmitting ? (
                     <>
-                      <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      <span className="w-4 h-4 border-2 border-zinc-400 border-t-zinc-950 rounded-full animate-spin" />
                       Submitting...
                     </>
                   ) : (
@@ -252,9 +252,9 @@ export default function Contact() {
                   )}
                 </button>
 
-                <p className="text-xs text-slate-400 text-center">
+                <p className="text-xs text-zinc-600 text-center">
                   By submitting this form, you agree to our{" "}
-                  <a href="#" className="underline hover:text-slate-500">
+                  <a href="#" className="text-zinc-400 hover:text-zinc-300 transition-colors">
                     Privacy Policy
                   </a>
                   .

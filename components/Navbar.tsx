@@ -11,7 +11,7 @@ function cn(...inputs: (string | undefined | null | false)[]) {
 }
 
 const navLinks = [
-  { href: "#about", label: "The Firm" },
+  { href: "#about", label: "About" },
   { href: "#approach", label: "Approach" },
   { href: "#portfolio", label: "Portfolio" },
   { href: "#contact", label: "Contact" },
@@ -23,7 +23,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -32,8 +32,8 @@ export default function Navbar() {
   return (
     <motion.header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "glass shadow-sm py-4" : "bg-transparent py-6"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
+        isScrolled ? "glass border-zinc-800/50 py-3" : "bg-transparent py-5"
       )}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -41,34 +41,31 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-navy-900 flex items-center justify-center">
-            <span className="text-white font-serif font-bold text-xl">V</span>
+        <a href="#" className="flex items-center gap-3">
+          <div className="w-8 h-8 bg-zinc-100 flex items-center justify-center rounded-md">
+            <span className="text-zinc-950 font-semibold text-sm">V</span>
           </div>
           <div className="hidden sm:block">
-            <span className="font-serif text-xl font-semibold text-navy-900">
+            <span className="text-sm font-semibold text-zinc-100 tracking-tight">
               Voltura
-            </span>
-            <span className="block text-xs text-slate-500 tracking-widest uppercase">
-              Digital Assets
             </span>
           </div>
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-slate-600 hover:text-navy-900 transition-colors font-medium text-sm tracking-wide"
+              className="text-sm text-zinc-500 hover:text-zinc-100 transition-colors duration-200"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="px-6 py-2.5 bg-navy-900 text-white font-medium text-sm tracking-wide hover:bg-navy-800 transition-colors"
+            className="px-5 py-2 bg-zinc-100 text-zinc-950 text-sm font-medium hover:bg-zinc-200 transition-all duration-200 rounded-md"
           >
             Inquire
           </a>
@@ -76,11 +73,11 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden p-2 text-navy-900"
+          className="lg:hidden p-2 text-zinc-400 hover:text-zinc-100 transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
@@ -91,14 +88,14 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden glass border-t border-slate-200"
+            className="lg:hidden glass border-t border-zinc-800"
           >
-            <nav className="flex flex-col py-4 px-6 space-y-4">
+            <nav className="flex flex-col py-4 px-6 space-y-1">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-slate-600 hover:text-navy-900 transition-colors font-medium py-2 border-b border-slate-100"
+                  className="text-zinc-400 hover:text-zinc-100 transition-colors py-3 border-b border-zinc-800/50"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -106,7 +103,7 @@ export default function Navbar() {
               ))}
               <a
                 href="#contact"
-                className="px-6 py-3 bg-navy-900 text-white font-medium text-center tracking-wide hover:bg-navy-800 transition-colors"
+                className="mt-4 px-6 py-3 bg-zinc-100 text-zinc-950 text-sm font-medium text-center hover:bg-zinc-200 transition-colors rounded-md"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Inquire
@@ -114,7 +111,6 @@ export default function Navbar() {
             </nav>
           </motion.div>
         )}
-      </AnimatePresence>
-    </motion.header>
+AnimatePresence>
   );
 }
