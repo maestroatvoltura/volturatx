@@ -11,10 +11,9 @@ function cn(...inputs: (string | undefined | null | false)[]) {
 }
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#approach", label: "Approach" },
-  { href: "#portfolio", label: "Portfolio" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#approach", label: "Approach" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -41,7 +40,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-3">
           <div className="w-8 h-8 bg-zinc-100 flex items-center justify-center rounded-md">
             <span className="text-zinc-950 font-semibold text-sm">V</span>
           </div>
@@ -64,7 +63,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             className="px-5 py-2 bg-zinc-100 text-zinc-950 text-sm font-medium hover:bg-zinc-200 transition-all duration-200 rounded-md"
           >
             Inquire
@@ -102,7 +101,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 className="mt-4 px-6 py-3 bg-zinc-100 text-zinc-950 text-sm font-medium text-center hover:bg-zinc-200 transition-colors rounded-md"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

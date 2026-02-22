@@ -33,7 +33,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <a
-                  href="#about"
+                  href="/#about"
                   className="text-zinc-500 hover:text-zinc-300 transition-colors"
                 >
                   About
@@ -41,7 +41,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#approach"
+                  href="/#approach"
                   className="text-zinc-500 hover:text-zinc-300 transition-colors"
                 >
                   Approach
@@ -49,15 +49,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#portfolio"
-                  className="text-zinc-500 hover:text-zinc-300 transition-colors"
-                >
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
+                  href="/#contact"
                   className="text-zinc-500 hover:text-zinc-300 transition-colors"
                 >
                   Contact
@@ -74,22 +66,14 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <a
-                  href="mailto:invest@voltura.com"
+                  href="mailto:acquisitions@volturatx.com"
                   className="text-zinc-500 hover:text-zinc-300 transition-colors"
                 >
-                  invest@voltura.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+15125670000"
-                  className="text-zinc-500 hover:text-zinc-300 transition-colors"
-                >
-                  +1 (512) 567-0000
+                  acquisitions@volturatx.com
                 </a>
               </li>
               <li className="text-zinc-600">
-                United States
+                Based in Texas, USA
               </li>
             </ul>
           </div>
