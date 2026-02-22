@@ -55,49 +55,32 @@ export default function Contact() {
 
             <div className="space-y-5">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-zinc-900 flex items-center justify-center flex-shrink-0 border border-zinc-800">
+                <div className="w-10 h-10 bg-zinc-900 flex items-center justify-center flex-shrink-0 border border-zinc-800 rounded-md">
                   <Mail size={16} className="text-zinc-400" />
                 </div>
                 <div>
-                  <span className="block text-xs text-zinc-600 tracking-widest uppercase mb-1">
+                  <span className="block text-xs text-zinc-500 tracking-widest uppercase mb-1 font-medium">
                     Email
                   </span>
                   <a
-                    href="mailto:invest@voltura.com"
-                    className="text-zinc-300 hover:text-zinc-100 transition-colors text-sm"
+                    href="mailto:acquisitions@volturatx.com"
+                    className="text-zinc-300 hover:text-white transition-colors text-sm"
                   >
-                    invest@voltura.com
+                    acquisitions@volturatx.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-zinc-900 flex items-center justify-center flex-shrink-0 border border-zinc-800">
-                  <Phone size={16} className="text-zinc-400" />
-                </div>
-                <div>
-                  <span className="block text-xs text-zinc-600 tracking-widest uppercase mb-1">
-                    Phone
-                  </span>
-                  <a
-                    href="tel:+15125670000"
-                    className="text-zinc-300 hover:text-zinc-100 transition-colors text-sm"
-                  >
-                    +1 (512) 567-0000
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-zinc-900 flex items-center justify-center flex-shrink-0 border border-zinc-800">
+                <div className="w-10 h-10 bg-zinc-900 flex items-center justify-center flex-shrink-0 border border-zinc-800 rounded-md">
                   <Globe size={16} className="text-zinc-400" />
                 </div>
                 <div>
-                  <span className="block text-xs text-zinc-600 tracking-widest uppercase mb-1">
+                  <span className="block text-xs text-zinc-500 tracking-widest uppercase mb-1 font-medium">
                     Headquarters
                   </span>
                   <span className="text-zinc-400 text-sm">
-                    United States
+                    Texas, United States
                   </span>
                 </div>
               </div>
