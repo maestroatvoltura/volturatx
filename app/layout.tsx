@@ -11,6 +11,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Voltura | Premium Digital Infrastructure for the Modern Enterprise",
   description: "Voltura acquires, develops, and manages premium digital assets for global enterprises. We provide strategic domain portfolio management and digital infrastructure solutions.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
