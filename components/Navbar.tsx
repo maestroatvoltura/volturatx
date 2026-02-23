@@ -14,6 +14,7 @@ function cn(...inputs: (string | undefined | null | false)[]) {
 const navLinks = [
   { href: "/#about", label: "About" },
   { href: "/#approach", label: "Approach" },
+  { href: "/blog", label: "Insights" },
   { href: "/#contact", label: "Contact" },
 ];
 
