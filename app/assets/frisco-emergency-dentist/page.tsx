@@ -58,9 +58,9 @@ export default function FriscoAssetPage() {
               className="p-6 bg-zinc-900/30 border border-zinc-800 rounded-lg hover:border-zinc-700 transition-colors"
             >
               <TrendingUp className="w-8 h-8 text-blue-500 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">High ROI</h3>
+              <h3 className="text-lg font-semibold mb-2">Ad Cost Killer</h3>
               <p className="text-sm text-zinc-400 leading-relaxed">
-                One new patient covers the entire acquisition cost. Capture leads actively searching for immediate dental care.
+                "Dentist Frisco" CPC averages <strong>$16.78</strong>. Emergency keywords cost even more. Buy this domain for the cost of ~10 clicks.
               </p>
             </motion.div>
 
