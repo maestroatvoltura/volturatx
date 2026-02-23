@@ -60,7 +60,7 @@ export default function McKinneyTreePage() {
               <MousePointer2 className="w-8 h-8 text-blue-500 mb-4" />
               <h3 className="text-lg font-semibold mb-2">Google Ad Killer</h3>
               <p className="text-sm text-zinc-400 leading-relaxed">
-                Stop paying $20-$50 per click for this keyword. Own the domain, redirect the traffic, and lower your customer acquisition cost to zero.
+                CPC for "Tree Removal McKinney" averages <strong>$25-$45 per click</strong>. Stop renting traffic. Own the asset for the cost of ~6 clicks.
               </p>
             </motion.div>
 
@@ -73,7 +73,7 @@ export default function McKinneyTreePage() {
               <Truck className="w-8 h-8 text-emerald-500 mb-4" />
               <h3 className="text-lg font-semibold mb-2">One Job ROI</h3>
               <p className="text-sm text-zinc-400 leading-relaxed">
-                A single emergency removal job ($1,500+) covers the cost of this asset 5x over. It pays for itself in the first storm.
+                Local removal jobs average <strong>$1,200 - $3,500</strong>. A single lead from this domain generates 5x-10x ROI instantly.
               </p>
             </motion.div>
           </div>
