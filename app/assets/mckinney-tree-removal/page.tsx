@@ -1,0 +1,137 @@
+"use client";
+
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
+import { CheckCircle2, Trees, Zap, Truck, MousePointer2 } from "lucide-react";
+
+export default function McKinneyTreePage() {
+  return (
+    <main className="min-h-screen bg-zinc-950 text-zinc-100 font-sans selection:bg-emerald-500/30">
+      <Navbar />
+      
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          {/* Asset Header */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-12 border-b border-zinc-800 pb-8"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-medium tracking-wide uppercase border border-emerald-500/20">
+                Available for Acquisition
+              </span>
+              <span className="px-3 py-1 rounded-full bg-zinc-800/50 text-zinc-400 text-xs font-medium tracking-wide uppercase border border-zinc-700/50">
+                Home Services / High Ticket
+              </span>
+            </div>
+            
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-2">
+              McKinneyTreeRemoval.com
+            </h1>
+            <p className="text-zinc-400 text-lg">
+              The "Category Killer" Domain for Collin County Tree Services.
+            </p>
+          </motion.div>
+
+          {/* Asset Value Props */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              className="p-6 bg-zinc-900/30 border border-zinc-800 rounded-lg hover:border-zinc-700 transition-colors"
+            >
+              <Zap className="w-8 h-8 text-yellow-500 mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Storm Ready</h3>
+              <p className="text-sm text-zinc-400 leading-relaxed">
+                When a tree falls on a roof, homeowners panic. They don't search for "Arborists." They search for <strong>"Tree Removal."</strong> Capture the emergency traffic.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="p-6 bg-zinc-900/30 border border-zinc-800 rounded-lg hover:border-zinc-700 transition-colors"
+            >
+              <MousePointer2 className="w-8 h-8 text-blue-500 mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Google Ad Killer</h3>
+              <p className="text-sm text-zinc-400 leading-relaxed">
+                Stop paying $20-$50 per click for this keyword. Own the domain, redirect the traffic, and lower your customer acquisition cost to zero.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="p-6 bg-zinc-900/30 border border-zinc-800 rounded-lg hover:border-zinc-700 transition-colors"
+            >
+              <Truck className="w-8 h-8 text-emerald-500 mb-4" />
+              <h3 className="text-lg font-semibold mb-2">One Job ROI</h3>
+              <p className="text-sm text-zinc-400 leading-relaxed">
+                A single emergency removal job ($1,500+) covers the cost of this asset 5x over. It pays for itself in the first storm.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Acquisition Details */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden"
+          >
+            <div className="p-8 md:p-10">
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8 border-b border-zinc-800 pb-8">
+                <div>
+                  <h2 className="text-2xl font-bold text-white mb-1">Acquisition Terms</h2>
+                  <p className="text-zinc-400 text-sm">Full ownership transfer via Voltura Digital Assets.</p>
+                </div>
+                <div className="text-right">
+                  <span className="block text-sm text-zinc-500 uppercase tracking-wider font-medium mb-1">Total Valuation</span>
+                  <span className="text-4xl font-bold text-white">$250.00</span>
+                </div>
+              </div>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                  <span className="text-zinc-300">Instant Domain Transfer (Push to your registrar)</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                  <span className="text-zinc-300">Includes all future traffic rights</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                  <span className="text-zinc-300">Secure Transaction Invoice provided</span>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="mailto:acquisitions@volturatx.com?subject=Acquire McKinneyTreeRemoval.com"
+                  className="flex-1 bg-white text-zinc-950 font-semibold py-4 px-6 rounded-lg text-center hover:bg-zinc-200 transition-all duration-200"
+                >
+                  Secure This Asset Now
+                </a>
+              </div>
+            </div>
+            <div className="bg-zinc-950/50 p-4 text-center border-t border-zinc-800">
+              <p className="text-xs text-zinc-500">
+                This asset is being offered exclusively to select McKinney operators.
+              </p>
+            </div>
+          </motion.div>
+
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
+}
