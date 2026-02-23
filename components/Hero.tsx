@@ -42,15 +42,10 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="#portfolio"
-              className="px-6 py-2.5 bg-zinc-100 text-zinc-950 font-medium text-sm tracking-wide hover:bg-zinc-200 transition-all duration-200 rounded-md"
-            >
-              View Portfolio
-            </a>
+            {/* View Portfolio Button Removed - Coming Soon */}
             <a
               href="#contact"
-              className="px-6 py-2.5 text-zinc-400 font-medium text-sm tracking-wide hover:text-zinc-100 transition-all duration-200"
+              className="px-6 py-2.5 bg-zinc-100 text-zinc-950 font-medium text-sm tracking-wide hover:bg-zinc-200 transition-all duration-200 rounded-md"
             >
               Contact Team →
             </a>
