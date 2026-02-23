@@ -58,9 +58,9 @@ export default function McKinneyTreePage() {
               className="p-6 bg-zinc-900/30 border border-zinc-800 rounded-lg hover:border-zinc-700 transition-colors"
             >
               <MousePointer2 className="w-8 h-8 text-blue-500 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">High Intent Traffic</h3>
+              <h3 className="text-lg font-semibold mb-2">Ad Cost Killer</h3>
               <p className="text-sm text-zinc-400 leading-relaxed">
-                Homeowners typing this exact domain aren't browsing. They have a problem and need a solution <strong>now</strong>. Capture the highest-value clicks in the market.
+                CPC for "Tree Removal McKinney" averages <strong>$25-$45 per click</strong>. Stop renting traffic. Own the asset for the cost of ~6 clicks.
               </p>
             </motion.div>
 
